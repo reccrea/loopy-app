@@ -18,8 +18,12 @@ export default [
 	skipFormatting,
 	{
 		rules: {
-			// vue文件规则
-			'vue/multi-word-component-names': 0
+			// vue规则
+			'vue/multi-word-component-names': 0,
+
+			// typescript规则
+			'@typescript-eslint/no-unused-vars': 0,
+			'@typescript-eslint/no-explicit-any': 0
 		}
 	},
 	{
