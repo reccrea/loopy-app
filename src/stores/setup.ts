@@ -9,7 +9,7 @@ import { registerPiniaPersistPlugin } from './plugin/persist';
 let pinia: Pinia;
 
 // 初始化pinia
-export const initStores = (app: App) => {
+export const setupStore = (app: App) => {
 	pinia = createPinia();
 	registerPiniaPersistPlugin(pinia);
 	app.use(pinia);
