@@ -1,4 +1,3 @@
-import { useCounterStore } from './modules/counter';
-import { useUserStore } from './modules/user';
-
-export { useCounterStore, useUserStore };
+export * from './modules';
+export * from './setup';
+export { defineStore, storeToRefs } from 'pinia';

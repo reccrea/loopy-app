@@ -1,14 +1,36 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import {
+	createRouter,
+	createWebHistory,
+	createWebHashHistory
+} from 'vue-router';
+import type { App } from 'vue';
 
-const router = createRouter({
-	history: createWebHistory(import.meta.env.BASE_URL),
-	routes: [
-		{
-			path: '/',
-			name: 'home',
-			component: () => import('../views/HomeView/index.vue')
-		}
-	]
+// 白名单应该包含基本静态路由
+const WHITE_NAME_LIST: string[] = [];
+
+// 创建一个可以被 Vue 应用程序使用的路由实例
+export const router = createRouter({
+	// 创建一个 hash 历史记录。
+	history: createWebHashHistory(import.meta.env.VITE_PUBLIC_PATH),
+	routes: [],
+	// 是否应该禁止尾部斜杠。默认为假
+	strict: true,
+	scrollBehavior: () => ({
+		left: 0,
+		top: 0
+	})
 });
 
-export default router;
+// 配置路由器
+export const setupRouter = (app: App<Element>) => {
+	app.use(router);
+};
+
+/* export const resetRouter = () => {
+	router.getRoutes().forEach((route) => {
+		const { name } = route;
+		if (name && !WHITE_NAME_LIST.includes(name as string)) {
+			router.hasRoute(name) && router.removeRoute(name);
+		}
+	});
+}; */
