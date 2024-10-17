@@ -13,7 +13,7 @@
 		"format": "prettier --write src/",
 		"lint:lint-staged": "lint-staged",
 		"prepare": "husky",
-		"commit": "git add . && cz"
+		"commit": "git add . && git cz"
 	},
 	"dependencies": {
 		"@vueuse/core": "^11.1.0",
