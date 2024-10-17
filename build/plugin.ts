@@ -33,8 +33,8 @@ const createVitePlugins = (
 		VITE_DROP_CONSOLE &&
 			removeConsole({
 				external: ['src/assets/iconfont/iconfont.js']
-			}),
-		VITE_CDN ? cdn : null
+			})
+		// VITE_CDN ? cdn : null
 	];
 };
 

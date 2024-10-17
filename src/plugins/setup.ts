@@ -1,7 +1,7 @@
-import { type App } from 'vue';
+import type { App } from 'vue';
 
-import { loadElementPlus } from './modules';
+import { setupElementPlus } from './modules';
 
 export const setupPlugins = (app: App) => {
-	loadElementPlus(app);
+	setupElementPlus(app);
 };

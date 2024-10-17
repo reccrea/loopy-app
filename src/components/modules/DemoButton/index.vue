@@ -1,7 +1,5 @@
 <template>
-	<div>home view</div>
-
-	<DemoButton></DemoButton>
+	<el-button>demo button</el-button>
 </template>
 
 <script lang="ts" setup></script>

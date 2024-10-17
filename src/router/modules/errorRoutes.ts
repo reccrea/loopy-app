@@ -1,9 +1,9 @@
 import type { RouteRecordRaw } from 'vue-router';
 
-export const errorRouter: RouteRecordRaw[] = [
+export const errorRoutes: RouteRecordRaw[] = [
 	{
 		// 解决刷新页面,route warnings
 		path: '/:pathMatch(.*)*',
-		component: () => import('@/components/ErrorMessage/404.vue')
+		component: () => import('@/components/modules/ErrorMessage/404.vue')
 	}
 ];

@@ -4,7 +4,8 @@ import {
 	createWebHistory,
 	createWebHashHistory
 } from 'vue-router';
-import type { App } from 'vue';
+import { type App } from 'vue';
+import { staticRoutes, errorRoutes } from './modules';
 
 // 白名单应该包含基本静态路由
 const WHITE_NAME_LIST: string[] = [];
@@ -20,7 +21,7 @@ const routerMode = {
 // 创建路由实例
 export const router: Router = createRouter({
 	history: routerMode[mode](),
-	routes: [],
+	routes: [...staticRoutes, ...errorRoutes],
 	// 是否应该禁止尾部斜杠,默认为false
 	strict: false,
 	scrollBehavior: () => ({
