@@ -4,14 +4,14 @@ import type { App } from 'vue';
 
 import { createPinia } from 'pinia';
 
-// import { registerPiniaPersistPlugin } from './plugin/persist';
+import { registerPiniaPersistPlugin } from './plugin/persist';
 
 let pinia: Pinia;
 
 // 初始化pinia
 export const initStores = (app: App) => {
 	pinia = createPinia();
-	// registerPiniaPersistPlugin(pinia);
+	registerPiniaPersistPlugin(pinia);
 	app.use(pinia);
 	return pinia;
 };

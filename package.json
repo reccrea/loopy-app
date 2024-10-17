@@ -20,6 +20,7 @@
 	},
 	"dependencies": {
 		"@vueuse/core": "^11.1.0",
+		"crypto-js": "^4.2.0",
 		"element-plus": "^2.8.5",
 		"pinia": "^2.2.4",
 		"pinia-plugin-persistedstate": "^4.1.1",
@@ -30,6 +31,7 @@
 		"@commitlint/cli": "^19.5.0",
 		"@commitlint/config-conventional": "^19.5.0",
 		"@tsconfig/node20": "^20.1.4",
+		"@types/crypto-js": "^4.2.2",
 		"@types/node": "^20.16.11",
 		"@vitejs/plugin-vue": "^5.1.4",
 		"@vitejs/plugin-vue-jsx": "^4.0.1",
