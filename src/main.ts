@@ -4,7 +4,7 @@ import { setupStore } from '@/stores';
 import { setupPlugins } from '@/plugins';
 import { setupRouter, router } from '@/router';
 
-import '@/style/index.less';
+import '@/styles/index.less';
 
 const bootstrap = async () => {
 	const app = createApp(App);
