@@ -1,10 +1,40 @@
 /** @type {import('cz-git').UserConfig} */
 export default {
+	extends: ['@commitlint/config-conventional'],
 	rules: {
 		// @see: https://commitlint.js.org/#/reference-rules
+		'body-leading-blank': [2, 'always'],
+		'footer-leading-blank': [1, 'always'],
+		'header-max-length': [2, 'always', 108],
+		'subject-empty': [2, 'never'],
+		'type-empty': [2, 'never'],
+		'subject-case': [0],
+		'type-enum': [
+			2,
+			'always',
+			[
+				'feat',
+				'fix',
+				'docs',
+				'style',
+				'refactor',
+				'perf',
+				'test',
+				'build',
+				'ci',
+				'chore',
+				'revert',
+				'wip',
+				'workflow',
+				'types',
+				'release'
+			]
+		]
 	},
 	prompt: {
-		alias: { fd: 'docs: fix typos' },
+		alias: {
+			fd: 'docs: fix typos'
+		},
 		messages: {
 			type: "Select the type of change that you're committing:",
 			scope: 'Denote the SCOPE of this change (optional):',
@@ -22,8 +52,16 @@ export default {
 			confirmCommit: 'Are you sure you want to proceed with the commit above?'
 		},
 		types: [
-			{ value: 'feat', name: 'feat:     A new feature', emoji: ':sparkles:' },
-			{ value: 'fix', name: 'fix:      A bug fix', emoji: ':bug:' },
+			{
+				value: 'feat',
+				name: 'feat:     A new feature',
+				emoji: ':sparkles:'
+			},
+			{
+				value: 'fix',
+				name: 'fix:      A bug fix',
+				emoji: ':bug:'
+			},
 			{
 				value: 'docs',
 				name: 'docs:     Documentation only changes',
