@@ -11,7 +11,7 @@ import '@/styles/index.less';
 const bootstrap = async () => {
 	const app = createApp(App);
 
-	// 配置 store
+	// 配置store
 	setupStore(app);
 
 	// 配置路由
