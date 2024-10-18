@@ -22,3 +22,18 @@ declare interface ViteEnv {
 	VITE_API_URL: string;
 	VITE_CDN: boolean;
 }
+
+interface ImportMetaEnv extends ViteEnv {
+	__: unknown;
+}
+
+// app信息
+declare const __APP_INFO__: {
+	pkg: {
+		name: string;
+		version: string;
+		dependencies: Recordable<string>;
+		devDependencies: Recordable<string>;
+	};
+	lastBuildTime: string;
+};

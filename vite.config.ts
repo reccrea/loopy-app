@@ -1,6 +1,14 @@
 import { type UserConfigExport, type ConfigEnv, loadEnv } from 'vite';
 import { root, alias, wrapperEnv } from './build/utils';
 import { createVitePlugins } from './build/plugin';
+import pkg from './package.json';
+import dayjs from 'dayjs';
+
+const { dependencies, devDependencies, name, version } = pkg;
+const __APP_INFO__ = {
+	pkg: { dependencies, devDependencies, name, version },
+	lastBuildTime: dayjs().format('YYYY-MM-DD HH:mm:ss')
+};
 
 export default ({ mode }: ConfigEnv): UserConfigExport => {
 	const env = loadEnv(mode, root);
@@ -11,6 +19,9 @@ export default ({ mode }: ConfigEnv): UserConfigExport => {
 		root,
 		resolve: {
 			alias
+		},
+		define: {
+			__APP_INFO__: JSON.stringify(__APP_INFO__)
 		},
 		server: {
 			host: '0.0.0.0',

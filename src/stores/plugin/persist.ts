@@ -12,7 +12,9 @@ const cacheCipher = {
 	iv: '@11111000001111_'
 };
 
-const PERSIST_KEY_PREFIX = '';
+const { pkg, lastBuildTime } = __APP_INFO__;
+const { name } = pkg;
+const PERSIST_KEY_PREFIX: string = name;
 
 const persistEncryption: Encryption = EncryptionFactory.createAesEncryption({
 	key: cacheCipher.key,
