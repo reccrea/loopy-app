@@ -20,6 +20,9 @@ importers:
       element-plus:
         specifier: ^2.8.5
         version: 2.8.5(vue@3.5.12(typescript@5.5.4))
+      normalize.css:
+        specifier: ^8.0.1
+        version: 8.0.1
       pinia:
         specifier: ^2.2.4
         version: 2.2.4(typescript@5.5.4)(vue@3.5.12(typescript@5.5.4))
@@ -2057,6 +2060,9 @@ packages:
 
   normalize-wheel-es@1.2.0:
     resolution: {integrity: sha512-Wj7+EJQ8mSuXr2iWfnujrimU35R2W4FAErEyTmJoJ7ucwTn2hOUSsRehMb5RSYkxXGTM7Y9QpvPmp++w5ftoJw==}
+
+  normalize.css@8.0.1:
+    resolution: {integrity: sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==}
 
   npm-normalize-package-bin@3.0.1:
     resolution: {integrity: sha512-dMxCf+zZ+3zeQZXKxmyuCKlIDPGuv8EF940xbkC4kQVDTtqoh6rJFO+JTKSA6/Rwi0getWmtuy4Itup0AMcaDQ==}
@@ -4842,6 +4848,8 @@ snapshots:
   normalize-path@3.0.0: {}
 
   normalize-wheel-es@1.2.0: {}
+
+  normalize.css@8.0.1: {}
 
   npm-normalize-package-bin@3.0.1: {}
 

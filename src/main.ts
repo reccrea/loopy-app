@@ -6,6 +6,7 @@ import { setupRouter, router } from '@/router';
 import { setupDirectives } from '@/directives';
 import { setupGlobComponents } from '@/components';
 
+// import 'normalize.css';
 import '@/styles/index.less';
 
 const bootstrap = async () => {
