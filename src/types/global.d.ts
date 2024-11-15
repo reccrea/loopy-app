@@ -21,6 +21,7 @@ declare interface ViteEnv {
 	VITE_PUBLIC_PATH: string;
 	VITE_API_URL: string;
 	VITE_CDN: boolean;
+	VITE_SENTRY_AUTH_TOKEN: string;
 }
 
 interface ImportMetaEnv extends ViteEnv {

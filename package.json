@@ -19,6 +19,8 @@
 		"commit": "git add . && git cz"
 	},
 	"dependencies": {
+		"@sentry/vite-plugin": "^2.22.6",
+		"@sentry/vue": "^8.37.1",
 		"@vueuse/core": "^11.1.0",
 		"crypto-js": "^4.2.0",
 		"dayjs": "^1.11.13",

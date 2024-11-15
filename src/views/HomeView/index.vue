@@ -1,6 +1,4 @@
 <template>
-	<div>home view</div>
-
 	<DemoButton></DemoButton>
 </template>
 

@@ -1,7 +1,8 @@
 import type { App } from 'vue';
 
-import { setupElementPlus } from './modules';
+import { setupElementPlus, setupSentry } from './modules';
 
 export const setupPlugins = (app: App) => {
 	setupElementPlus(app);
+	setupSentry(app);
 };
